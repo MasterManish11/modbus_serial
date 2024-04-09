@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node" :"20.x"
+    "node": "20.x"
   },
   "scripts": {
-    "start" : "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "manish",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "modbus-serial": "^8.0.16"
   }
 }
