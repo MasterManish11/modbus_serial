@@ -1,7 +1,15 @@
 const express = require("express");
+import cors from "cors";
 const app = express();
 app.use(express.json());
-
+app.use(cors(
+    {
+      origin: ["https://modbustcp.vercel.app/"],
+      methods: ["POST", "GET", "DELETE", "PUT"],
+      credentials: true
+    }
+  ));
+  
 const ModbusRTU = require("modbus-serial");
 const client = new ModbusRTU();
 const plcIP = "192.168.0.137";
